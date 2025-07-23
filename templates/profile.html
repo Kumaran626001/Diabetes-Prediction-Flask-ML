@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ user[0] }}'s Profile</title>
+    <link rel="stylesheet" href="../static/profile.css">
+    <link rel="icon" type="image/png" href="../static/images/logo1.png">
+</head>
+
+<body>
+    {% include 'nav.html' %}
+    <center>
+        <div class="card" style="width: 15rem;">
+            <img src="../static/images/profile.jpg" class="card-img-top" alt="Profile Picture">
+            <div class="card-body">
+                <h2 class="card-title">{{ user[0] }}</h2><br>
+                <p class="card-text">DOB:-<br>{{user[1]}}<br><br>
+                    Blood Group:-<br>{{user[2]}}<br><br>
+                    Phone No:-<br>{{user[3]}}<br><br>
+                </p>
+            </div>
+        </div>
+    </center>
+</body>
+
+</html>

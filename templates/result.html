@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="../static/result.css">
+    <link rel="icon" type="image/png" href="../static/images/logo1.png">
+</head>
+
+<body>
+
+    {% include 'nav.html' %}
+    <div class="filter">
+        <table>
+            <tr>
+                <th>Name</th>
+                <td>{{user[0]}}</td>
+            </tr>
+            <tr>
+                <th>Gender</th>
+                <td>{{user[1]}}</td>
+            </tr>
+            <tr>
+                <th>age</th>
+                <td>{{user[2]}}</td>
+            </tr>
+            <tr>
+                <th>hypertension</th>
+                <td>{{user[3]}}</td>
+            </tr>
+            <tr>
+                <th>heart disease</th>
+                <td>{{user[4]}}</td>
+            </tr>
+            <tr>
+                <th>bmi</th>
+                <td>{{user[6]}}</td>
+            </tr>
+            <tr>
+                <th>heamogloblin</th>
+                <td>{{user[7]}}</td>
+            </tr>
+            <tr>
+                <th>Blood Glucose</th>
+                <td>{{user[8]}}</td>
+            </tr>
+            <tr>
+                <th>Smoking History</th>
+                <td>{{user[5]}}</td>
+            </tr>
+            <tr>
+                <th>Result</th>
+                <td id="answer">{{user[9]}}</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        const answerElement = document.getElementById("answer");
+        const answer = answerElement.textContent.trim();
+
+        if (answer === "Negative") {
+            answerElement.style.color = "green";
+        } else if (answer === "Positive") {
+            answerElement.style.color = "red";
+        }
+    </script>
+</body>
+
+</html>
